@@ -65,3 +65,5 @@ volumes:
 
 networks:
   unifi:
+    external:
+      name: nginx-proxy_default
