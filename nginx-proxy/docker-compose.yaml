@@ -11,7 +11,5 @@ services:
   whoami:
     image: jwilder/whoami
     container_name: whoami
-    networks:
-      - unifi
     environment:
       - VIRTUAL_HOST=whoami.local
