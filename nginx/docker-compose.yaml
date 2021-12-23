@@ -17,3 +17,5 @@ services:
       - unifi
     environment:
       - VIRTUAL_HOST=whoami.local
+networks:
+  unifi:
