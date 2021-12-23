@@ -1,6 +1,9 @@
 # docker-portainer
 
+```nginx-proxy```
 
 ```https://github.com/nicholasham/docker-portainer```
+
 ```refs/heads/main```
-```./nginx/docker-compose.yaml```
+
+```./nginx-proxy/docker-compose.yaml```

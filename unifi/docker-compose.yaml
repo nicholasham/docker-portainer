@@ -3,8 +3,6 @@ services:
   mongo:
     image: mongo:3.6
     container_name: ${COMPOSE_PROJECT_NAME}_mongo
-    networks:
-      - unifi
     restart: always
     volumes:
       - db:/data/db
@@ -15,8 +13,6 @@ services:
     depends_on:
       - mongo
     init: true
-    networks:
-      - unifi
     restart: always
     volumes:
       - dir:/unifi
@@ -63,7 +59,7 @@ volumes:
   dir:
   run:
 
-networks:
-  unifi:
-    external:
-      name: nginx-proxy_default
+networks: 
+  default: 
+    external: 
+      name: shared 
