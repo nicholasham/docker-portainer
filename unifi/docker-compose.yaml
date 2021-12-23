@@ -34,7 +34,7 @@ services:
       DB_URI: mongodb://mongo/unifi
       STATDB_URI: mongodb://mongo/unifi_stat
       DB_NAME: unifi
-      VIRTUAL_HOST: whoami.local
+      VIRTUAL_HOST: unifi.local
       VIRTUAL_PORT: 8880
     ports:
       - "3478:3478/udp" # STUN
