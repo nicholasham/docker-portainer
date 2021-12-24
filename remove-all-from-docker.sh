@@ -23,3 +23,4 @@ docker network rm `docker network ls -q`
 # docker volume ls
 
 # The following comma
+docker network create shared
