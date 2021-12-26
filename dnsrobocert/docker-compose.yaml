@@ -7,6 +7,7 @@ services:
       - CLOUDFLARE_USERNAME=${CLOUDFLARE_USERNAME}
       - CLOUDFLARE_AUTH_TOKEN=${CLOUDFLARE_AUTH_TOKEN}
       - DOMAIN=${DOMAIN}
+      - DEPLOY_HOOK: create-nginx-certs
     volumes:
       - ${DOCKER_MOUNT_DIR}/dnsrobocert/config:/etc/dnsrobocert
       - ${DOCKER_MOUNT_DIR}/letsencrypt:/etc/letsencrypt
