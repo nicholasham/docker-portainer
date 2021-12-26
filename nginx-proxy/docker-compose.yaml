@@ -7,12 +7,15 @@ services:
       - "80:80"
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
+      - /home/docker/persistence/nginx-data/certs:/etc/nginx/certs
+      - ${DOCKER_MOUNT_DIR}/letsencrypt/live:/etc/nginx/certs
 
   whoami:
     image: jwilder/whoami
     container_name: whoami
     environment:
       - VIRTUAL_HOST=whoami.local
+      - DOCKER_MOUNT_DIR=${DOCKER_MOUNT_DIR}
 networks: 
   default: 
     external: 
