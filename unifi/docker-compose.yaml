@@ -32,6 +32,7 @@ services:
       DB_NAME: unifi
       VIRTUAL_HOST: unifi.local
       VIRTUAL_PORT: 8080
+      CERT_IS_CHAIN: true
     ports:
       - "3478:3478/udp" # STUN
       - "6789:6789/tcp" # Speed test
