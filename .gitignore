@@ -1,2 +1,3 @@
 # Local .terraform directories
-**/secrets/*
+secrets
+letsencrypt

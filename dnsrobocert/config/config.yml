@@ -1,0 +1,25 @@
+draft: false
+acme: 
+  api_version: 2
+  email_account: ${CLOUDFLARE_USERNAME}
+  staging: true
+  certs_permissions:
+    files_mode: 0755
+    dirs_mode: 0755
+    user: 1000
+    group: 1000
+  crontab_renew: 12 01,13 * * *
+
+profiles: 
+  - name: cloudflare
+    provider: cloudflare
+    provider_options:
+      auth_token: ${CLOUDFLARE_AUTH_TOKEN}
+    sleep_time: 45
+    max_checks: 5
+certificates:
+  - domains:
+    - "unifi.${DOMAIN}"
+    profile: cloudflare
+    pfx:
+      export: true
