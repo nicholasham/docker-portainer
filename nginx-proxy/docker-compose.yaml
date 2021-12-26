@@ -7,7 +7,6 @@ services:
       - "80:80"
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
-      - /home/docker/persistence/nginx-data/certs:/etc/nginx/certs
       - ${DOCKER_MOUNT_DIR}/letsencrypt/live:/etc/nginx/certs
 
   whoami:
