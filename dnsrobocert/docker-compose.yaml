@@ -3,6 +3,10 @@ services:
   dnsrobocert:
     image: adferrand/dnsrobocert:3.15.0
     container_name: 'dnsrobocert'
+    environment:
+      - CLOUDFLARE_USERNAME=${CLOUDFLARE_USERNAME}
+      - CLOUDFLARE_AUTH_TOKEN=${CLOUDFLARE_AUTH_TOKEN}
+      - DOMAIN=${DOMAIN}
     volumes:
       - ${DOCKER_MOUNT_DIR}/dnsrobocert/config:/etc/dnsrobocert
       - ${DOCKER_MOUNT_DIR}/letsencrypt:/etc/letsencrypt
