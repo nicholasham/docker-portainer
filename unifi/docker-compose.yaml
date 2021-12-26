@@ -18,7 +18,7 @@ services:
       - dir:/unifi
       - data:/unifi/data
       - log:/unifi/log
-      - cert:/unifi/cert
+      - ${DOCKER_MOUNT_DIR}/letsencrypt/live/unifi.parnic.co.uk:/unifi/cert
       - init:/unifi/init.d
       - run:/var/run/unifi
       # Mount local folder for backups and autobackups
@@ -55,7 +55,6 @@ volumes:
   dbcfg:
   data:
   log:
-  cert:
   init:
   dir:
   run:
